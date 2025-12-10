@@ -1,10 +1,12 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { blurIn } from '../../utils/animations';
 import { Bot, Sparkles, Smartphone, ArrowRight } from 'lucide-react';
 
 export const Slide13_AI: React.FC<{ isActive: boolean }> = ({ isActive }) => {
-  const qrUrl = "https://api.qrserver.com/v1/create-qr-code/?size=400x400&color=000000&bgcolor=ffffff&data=https://sweet-croissant-22afdf.netlify.app/";
+  const targetUrl = "https://identme.vercel.app";
+  const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&color=000000&bgcolor=ffffff&data=${encodeURIComponent(targetUrl)}`;
 
   return (
     <div className="w-full h-full flex flex-col justify-center px-8 md:px-24 bg-black relative">
@@ -52,7 +54,7 @@ export const Slide13_AI: React.FC<{ isActive: boolean }> = ({ isActive }) => {
                 <span className="font-bold tracking-widest uppercase text-sm">Scan to Experience AI</span>
                 <ArrowRight size={16} className="text-gray-500"/>
             </div>
-            <p className="text-gray-500 text-xs mt-2 tracking-wider">https://sweet-croissant-22afdf.netlify.app/</p>
+            <p className="text-gray-500 text-xs mt-2 tracking-wider underline">{targetUrl}</p>
         </motion.div>
       </motion.div>
     </div>

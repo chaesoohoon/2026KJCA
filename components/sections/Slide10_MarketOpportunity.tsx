@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { blurIn } from '../../utils/animations';
@@ -40,19 +41,19 @@ export const Slide10_MarketOpportunity: React.FC<{ isActive: boolean }> = ({ isA
                 </div>
             </motion.div>
 
-            {/* Pillar 2 */}
-            <motion.div variants={blurIn} custom={3} className="group relative p-8 border border-white/10 bg-white/[0.02] hover:bg-blue-900/[0.1] hover:border-blue-500/30 transition-colors overflow-hidden">
-                <div className="absolute -right-4 -top-10 text-[10rem] font-display font-black text-white/[0.03] group-hover:text-blue-500/[0.05] transition-colors select-none">
+            {/* Pillar 2 - Removed Blue, Consistent Design */}
+            <motion.div variants={blurIn} custom={3} className="group relative p-8 border border-white/10 bg-white/[0.02] hover:bg-white/[0.05] transition-colors overflow-hidden">
+                <div className="absolute -right-4 -top-10 text-[10rem] font-display font-black text-white/[0.03] group-hover:text-white/[0.05] transition-colors select-none">
                     02
                 </div>
                 <div className="relative z-10">
-                    <MapPin className="text-gray-500 w-10 h-10 mb-6 group-hover:text-blue-500 transition-colors" />
+                    <MapPin className="text-gray-500 w-10 h-10 mb-6 group-hover:text-white transition-colors" />
                     <h3 className="text-4xl font-display font-bold text-white mb-4 leading-tight">
                         BLUE<br/>OCEAN
                     </h3>
                     <p className="text-lg text-gray-400 font-medium leading-relaxed">
                         광주 첨단지구 내<br/>
-                        <span className="text-blue-500 font-bold">경쟁자 없는</span><br/>
+                        <span className="text-white font-bold">경쟁자 없는</span><br/>
                         무주공산 시장
                     </p>
                 </div>

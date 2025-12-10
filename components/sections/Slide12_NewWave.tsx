@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { blurIn } from '../../utils/animations';
-import { TrendingUp, Users, DollarSign, Newspaper, ExternalLink } from 'lucide-react';
+import { TrendingUp, Users, DollarSign, Newspaper, Info } from 'lucide-react';
 
 export const Slide12_NewWave: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   return (
@@ -13,7 +14,7 @@ export const Slide12_NewWave: React.FC<{ isActive: boolean }> = ({ isActive }) =
       >
         <div className="mb-12 border-l-4 border-accent pl-8">
             <motion.span variants={blurIn} custom={0} className="text-gray-500 font-bold tracking-widest uppercase text-sm mb-2 block">
-                Market Validation
+                External Market Benchmark
             </motion.span>
             <motion.h2 variants={blurIn} custom={1} className="font-display font-black text-5xl md:text-7xl text-white tracking-tight leading-none">
                 PROOF OF<br/>
@@ -37,34 +38,34 @@ export const Slide12_NewWave: React.FC<{ isActive: boolean }> = ({ isActive }) =
                             <Newspaper className="text-accent" size={24} />
                             <span className="font-bold text-gray-300">MARKET REPORT</span>
                         </div>
-                        <span className="text-xs font-mono text-gray-600">REF: 2025.06.23</span>
+                        <span className="text-xs font-mono text-gray-600">REF: FastCampus 2025</span>
                     </div>
 
                     <h3 className="text-2xl font-bold text-white mb-2">
-                        패스트캠퍼스 '바이브 코딩' 성과
+                        타사 '바이브 코딩' 교육 성과
                     </h3>
-                    <p className="text-gray-500 text-sm mb-10">
-                        론칭 후 약 5개월 만에 달성한 압도적 수치
+                    <p className="text-gray-500 text-sm mb-10 flex items-center gap-2">
+                        <Info size={14} /> 시장성 검증을 위한 외부 벤치마킹 데이터입니다.
                     </p>
 
                     <div className="grid grid-cols-2 gap-8">
                         <div>
                             <div className="flex items-center gap-2 text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">
-                                <Users size={14} /> Total Students
+                                <Users size={14} /> Market Demand
                             </div>
                             <div className="font-display font-black text-5xl md:text-6xl text-white">
                                 3,000<span className="text-2xl text-accent">+</span>
                             </div>
-                            <div className="text-xs text-gray-500 mt-2">수강생 돌파</div>
+                            <div className="text-xs text-gray-500 mt-2">단기간 수강생 모집</div>
                         </div>
                         <div>
                             <div className="flex items-center gap-2 text-gray-500 text-xs font-bold uppercase tracking-wider mb-2">
-                                <DollarSign size={14} /> Revenue
+                                <DollarSign size={14} /> Market Value
                             </div>
                             <div className="font-display font-black text-5xl md:text-6xl text-white">
                                 4<span className="text-3xl text-gray-400">억</span>
                             </div>
-                            <div className="text-xs text-gray-500 mt-2">누적 매출 달성</div>
+                            <div className="text-xs text-gray-500 mt-2">매출 규모 달성</div>
                         </div>
                     </div>
                 </div>

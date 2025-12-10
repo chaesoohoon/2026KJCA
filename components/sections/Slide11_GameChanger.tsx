@@ -7,11 +7,15 @@ export const Slide11_GameChanger: React.FC<{ isActive: boolean }> = ({ isActive 
   return (
     <div className="w-full h-full flex flex-col justify-center items-center px-6 md:px-12 bg-black text-center relative overflow-hidden">
       {/* Background Pulse (Heartbeat) */}
-      <div className="absolute inset-0 flex items-center justify-center">
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
          <motion.div 
-            animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="w-[50vw] h-[50vw] bg-accent/10 rounded-full blur-[100px]"
+            animate={{ 
+                scale: [1, 1.2, 1], 
+                opacity: [0.05, 0.1, 0.05] 
+            }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="w-[70vw] h-[70vw] bg-accent rounded-full blur-[150px]"
+            style={{ willChange: 'transform, opacity' }}
          ></motion.div>
       </div>
 

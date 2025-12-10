@@ -30,14 +30,14 @@ export const Slide04_Status: React.FC<{ isActive: boolean }> = ({ isActive }) =>
             {/* Right: Checklist */}
             <div className="flex-grow">
                  <div className="bg-white/[0.03] border border-white/10 rounded-3xl p-8 md:p-12">
-                    <motion.h3 variants={blurIn} custom={1} className="text-2xl text-white font-bold mb-8 flex items-center gap-3">
+                    <motion.h3 variants={blurIn} custom={1} className="text-2xl text-white font-bold mb-12 flex items-center gap-3">
                         <span className="w-2 h-8 bg-accent rounded-full"></span>
                         안정적 기반 마련 완료
                     </motion.h3>
 
-                    <ul className="space-y-6">
+                    <ul className="space-y-12">
                         {[
-                            { title: "자격증 교육 정착", desc: "GTQ/ITQ 합격 시스템 안정화" },
+                            { title: "자격증 교육 정착", desc: "GTQ 합격 시스템 안정화" },
                             { title: "아카이빙 시작", desc: "학생 포트폴리오 데이터화 시도" },
                             { title: "AI 툴 시범 도입", desc: "생성형 AI 기초 교육 커리큘럼화" }
                         ].map((item, idx) => (
@@ -45,14 +45,14 @@ export const Slide04_Status: React.FC<{ isActive: boolean }> = ({ isActive }) =>
                                 key={idx}
                                 variants={blurIn} 
                                 custom={idx + 2}
-                                className="flex items-start gap-4"
+                                className="flex items-start gap-8"
                             >
-                                <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent mt-1">
-                                    <Check size={14} strokeWidth={3} />
+                                <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center text-accent mt-1 shrink-0">
+                                    <Check size={24} strokeWidth={3} />
                                 </div>
                                 <div>
-                                    <h4 className="text-xl font-bold text-gray-200">{item.title}</h4>
-                                    <p className="text-gray-500">{item.desc}</p>
+                                    <h4 className="text-4xl font-bold text-gray-200 mb-2">{item.title}</h4>
+                                    <p className="text-gray-400 text-xl">{item.desc}</p>
                                 </div>
                             </motion.li>
                         ))}

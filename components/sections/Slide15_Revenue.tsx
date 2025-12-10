@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { blurIn } from '../../utils/animations';
@@ -24,7 +25,7 @@ export const Slide15_Revenue: React.FC<{ isActive: boolean }> = ({ isActive }) =
                 <h3 className="text-2xl font-bold mb-6 uppercase tracking-wider border px-4 py-2 inline-block border-black">Strategy</h3>
                 <ul className="space-y-4 font-bold text-xl">
                     <li>1. 포트폴리오 고도화</li>
-                    <li>2. 홍보 비용 0원 (바이럴 자동화)</li>
+                    <li>2. 바이럴 마케팅 자동 시스템 구축</li>
                     <li>3. 지역 내 AI 교육 1위 브랜드</li>
                     <li>4. 지역 특화 마케팅</li>
                 </ul>

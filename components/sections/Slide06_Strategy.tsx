@@ -2,7 +2,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { blurIn } from '../../utils/animations';
-import { Plus } from 'lucide-react';
 
 export const Slide06_Strategy: React.FC<{ isActive: boolean }> = ({ isActive }) => {
   return (
@@ -19,15 +18,21 @@ export const Slide06_Strategy: React.FC<{ isActive: boolean }> = ({ isActive }) 
         {/* The Ingredients */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 font-display font-black text-5xl md:text-8xl uppercase tracking-tighter text-gray-300">
             <motion.span variants={blurIn} custom={1} className="text-black">Design</motion.span>
-            <motion.span variants={blurIn} custom={2}><Plus size={40} className="text-accent"/></motion.span>
+            
+            {/* Gothic Plus Sign */}
+            <motion.span variants={blurIn} custom={2} className="font-sans font-bold text-6xl text-accent">+</motion.span>
+            
             <motion.span variants={blurIn} custom={3} className="text-black">Video</motion.span>
-            <motion.span variants={blurIn} custom={4}><Plus size={40} className="text-accent"/></motion.span>
+            
+            {/* Gothic Plus Sign */}
+            <motion.span variants={blurIn} custom={4} className="font-sans font-bold text-6xl text-accent">+</motion.span>
+            
             <motion.span variants={blurIn} custom={5} className="text-black">AI</motion.span>
         </div>
 
-        {/* The Transition (Just Plus, No Circle) */}
+        {/* The Transition */}
         <motion.div variants={blurIn} custom={6} className="my-8 md:my-12 flex justify-center text-accent">
-            <Plus size={60} strokeWidth={4} />
+            <span className="font-sans font-bold text-7xl">+</span>
         </motion.div>
 
         {/* The Result */}
