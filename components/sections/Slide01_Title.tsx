@@ -100,6 +100,22 @@ export const Slide01_Title: React.FC<{ isActive: boolean }> = ({ isActive }) => 
             학생이 직접 만들고,<br className="md:hidden"/>
             <span className="text-white font-bold border-b border-accent/50 pb-1">세상에 서비스하는 교육</span>
         </motion.p>
+
+        {/* Presenter Name - Added Here */}
+        <motion.div
+            variants={blurIn}
+            custom={5}
+            className="mt-16 flex items-center justify-center md:justify-start gap-4"
+        >
+             <div className="h-px w-12 bg-gray-700"></div>
+             <div className="text-sm text-gray-500 font-bold tracking-[0.2em] uppercase">
+                Presenter
+             </div>
+             <div className="text-xl font-bold text-white tracking-wider font-display">
+                채수훈
+             </div>
+        </motion.div>
+
       </motion.div>
     </div>
   );
