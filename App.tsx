@@ -27,6 +27,7 @@ import { Slide14_CX_Viral } from './components/sections/Slide14_CX_Viral';
 import { Slide14_Space } from './components/sections/Slide14_Space';
 import { Slide15_Revenue } from './components/sections/Slide15_Revenue';
 import { Slide16_Vision } from './components/sections/Slide16_Vision';
+import { Slide17_Gift } from './components/sections/Slide17_Gift';
 
 const SECTIONS = [
   Slide01_Title,
@@ -53,6 +54,7 @@ const SECTIONS = [
   Slide14_Space,
   Slide15_Revenue,
   Slide16_Vision,
+  Slide17_Gift,         // Final Gift Slide
 ];
 
 function App() {

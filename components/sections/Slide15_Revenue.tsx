@@ -16,7 +16,7 @@ export const Slide15_Revenue: React.FC<{ isActive: boolean }> = ({ isActive }) =
                 GOAL
              </motion.h2>
              <motion.p variants={blurIn} custom={1} className="font-display font-black text-6xl md:text-8xl">
-                2<span className="text-4xl">억+</span>
+                1.4<span className="text-4xl">억</span>
              </motion.p>
         </div>
 
