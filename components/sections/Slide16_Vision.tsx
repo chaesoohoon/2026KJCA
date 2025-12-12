@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { blurIn } from '../../utils/animations';
@@ -55,9 +56,7 @@ export const Slide16_Vision: React.FC<{ isActive: boolean }> = ({ isActive }) =>
         </div>
 
         <motion.div variants={blurIn} custom={5} className="mt-24">
-             <button className="group relative px-12 py-4 overflow-hidden rounded-full bg-white text-black transition-all hover:bg-accent hover:text-white">
-                <span className="relative z-10 text-sm font-black uppercase tracking-widest">Presentation End</span>
-             </button>
+             {/* Button Removed for smoother transition to next slides */}
              <p className="mt-6 text-[10px] text-gray-700 uppercase tracking-[0.2em]">
                 2026 THE International Vocational Training School
              </p>

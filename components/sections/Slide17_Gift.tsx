@@ -2,9 +2,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { blurIn } from '../../utils/animations';
-import { Gift, Heart, Smartphone, ExternalLink, Sparkles } from 'lucide-react';
+import { Gift, ExternalLink, Sparkles } from 'lucide-react';
 
-export const Slide17_Gift: React.FC<{ isActive: boolean }> = ({ isActive }) => {
+interface Slide17Props {
+  isActive: boolean;
+}
+
+export const Slide17_Gift: React.FC<Slide17Props> = ({ isActive }) => {
   const targetUrl = "https://talk-joy.vercel.app/";
   const qrUrl = `https://api.qrserver.com/v1/create-qr-code/?size=400x400&color=000000&bgcolor=ffffff&margin=10&data=${encodeURIComponent(targetUrl)}`;
 
@@ -88,8 +92,9 @@ export const Slide17_Gift: React.FC<{ isActive: boolean }> = ({ isActive }) => {
             </div>
         </motion.div>
 
-        <motion.div variants={blurIn} custom={4} className="mt-16 flex flex-col items-center gap-3">
-             <div className="h-8 w-px bg-gradient-to-b from-gray-800 to-transparent"></div>
+        {/* Footer Actions */}
+        <motion.div variants={blurIn} custom={4} className="mt-16 flex flex-col items-center gap-4">
+             <div className="h-16 w-px bg-gradient-to-b from-gray-800 to-transparent"></div>
              <div className="flex items-center gap-2 text-gray-600 text-xs tracking-[0.2em] uppercase font-bold">
                 From Code to Connection
              </div>

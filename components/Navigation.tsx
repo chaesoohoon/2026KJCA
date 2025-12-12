@@ -7,33 +7,20 @@ interface NavigationProps {
   onNavigate: (index: number) => void;
 }
 
-// Updated Indices for deck (Total 24 Slides)
+// Updated Indices for deck (Total 25 Slides now)
 // 0: Title
 // 1: Message
-// 2: Status (Dark)
-// 3: Problem (Dark)
-// 4: Keyword (LIGHT - Accent)  <-- Swapped
-// 5: Strategy (LIGHT - White)  <-- Swapped
-// 6: VibeIntro
-// 7: Detail1
-// 8: Detail2
-// 9: Expansion
-// 10: MarketOpp
-// 11: GameChanger
-// 12: NewWave
-// 13: WeaponOne
-// 14: WeaponTwo
-// 15: ExecutionBridge
-// 16: Design (LIGHT - White)
-// 17: Video
-// 18: AI
-// 19: CX Impact
-// 20: CX Viral (Dark)
-// 21: Space
-// 22: Revenue (LIGHT - Accent)
-// 23: Vision
+// 2: Hidden Achievement (Dark) <-- Added
+// 3: Status (Dark)
+// 4: Problem (Dark)
+// 5: Keyword (LIGHT - Accent)  <-- Shifted +1
+// 6: Strategy (LIGHT - White)  <-- Shifted +1
+// ...
+// 17: Design (LIGHT - White) <-- Shifted +1
+// ...
+// 23: Revenue (LIGHT - Accent) <-- Shifted +1
 
-const LIGHT_BG_SECTIONS = [4, 5, 16, 22];
+const LIGHT_BG_SECTIONS = [5, 6, 17, 23];
 
 export const Navigation: React.FC<NavigationProps> = ({ currentSection, totalSections }) => {
   const progress = ((currentSection + 1) / totalSections) * 100;

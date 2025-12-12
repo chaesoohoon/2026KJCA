@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
   <head>
@@ -7,13 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Pretendard:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200;300;400;500;600;700&family=Oswald:wght@400;500;700&family=Pretendard:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
               sans: ['Pretendard', 'sans-serif'],
+              serif: ['Noto Serif KR', 'serif'], // Added Serif font for emotional slides
               display: ['Oswald', 'sans-serif'], // Nike style condensed font
             },
             colors: {
@@ -70,6 +72,46 @@
       
       .text-shadow-glow {
         text-shadow: 0 0 40px rgba(255, 94, 0, 0.6);
+      }
+
+      /* PRINT / PDF EXPORT STYLES */
+      @media print {
+        @page {
+          size: landscape;
+          margin: 0;
+        }
+        
+        body {
+          overflow: visible !important;
+          background-color: #000000 !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        .snap-container {
+          height: auto !important;
+          overflow: visible !important;
+          scroll-snap-type: none !important;
+        }
+
+        .snap-section {
+          height: 100vh !important;
+          page-break-after: always !important;
+          break-after: page !important;
+          print-color-adjust: exact !important;
+          background-color: #000000 !important;
+        }
+
+        /* Hide UI elements during print */
+        .fixed, button, .no-print {
+          display: none !important;
+        }
+
+        /* Ensure white text prints as white on black */
+        * {
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
       }
     </style>
     <script type="importmap">
